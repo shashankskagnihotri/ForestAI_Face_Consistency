@@ -1,0 +1,9 @@
+{
+  "single_light_source_consistency": "yes",
+  "light_sources": [
+    {
+      "source_id": "primary_key_light",
+      "relative_direction_from_frame_center": "upper-right"
+    }
+  ]
+}

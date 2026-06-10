@@ -1,0 +1,389 @@
+{
+  "prompt_object_recognizability": "yes",
+  "objects_of_interest": [
+    {
+      "object_name": "main person",
+      "visible_overall": true,
+      "per_frame_visibility": [
+        {
+          "frame_index": 0,
+          "timestamp_sec": 0.0,
+          "visible": true
+        },
+        {
+          "frame_index": 11,
+          "timestamp_sec": 0.458,
+          "visible": true
+        },
+        {
+          "frame_index": 16,
+          "timestamp_sec": 0.667,
+          "visible": true
+        },
+        {
+          "frame_index": 32,
+          "timestamp_sec": 1.333,
+          "visible": true
+        },
+        {
+          "frame_index": 48,
+          "timestamp_sec": 2.0,
+          "visible": true
+        },
+        {
+          "frame_index": 64,
+          "timestamp_sec": 2.667,
+          "visible": true
+        },
+        {
+          "frame_index": 80,
+          "timestamp_sec": 3.333,
+          "visible": true
+        },
+        {
+          "frame_index": 96,
+          "timestamp_sec": 4.0,
+          "visible": true
+        },
+        {
+          "frame_index": 112,
+          "timestamp_sec": 4.667,
+          "visible": true
+        },
+        {
+          "frame_index": 128,
+          "timestamp_sec": 5.333,
+          "visible": true
+        },
+        {
+          "frame_index": 144,
+          "timestamp_sec": 6.0,
+          "visible": true
+        },
+        {
+          "frame_index": 160,
+          "timestamp_sec": 6.667,
+          "visible": true
+        },
+        {
+          "frame_index": 167,
+          "timestamp_sec": 6.958,
+          "visible": true
+        },
+        {
+          "frame_index": 176,
+          "timestamp_sec": 7.333,
+          "visible": true
+        },
+        {
+          "frame_index": 192,
+          "timestamp_sec": 8.0,
+          "visible": true
+        },
+        {
+          "frame_index": 208,
+          "timestamp_sec": 8.667,
+          "visible": true
+        },
+        {
+          "frame_index": 224,
+          "timestamp_sec": 9.333,
+          "visible": true
+        },
+        {
+          "frame_index": 226,
+          "timestamp_sec": 9.417,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "object_name": "long hallway",
+      "visible_overall": true,
+      "per_frame_visibility": [
+        {
+          "frame_index": 0,
+          "timestamp_sec": 0.0,
+          "visible": true
+        },
+        {
+          "frame_index": 11,
+          "timestamp_sec": 0.458,
+          "visible": true
+        },
+        {
+          "frame_index": 16,
+          "timestamp_sec": 0.667,
+          "visible": true
+        },
+        {
+          "frame_index": 32,
+          "timestamp_sec": 1.333,
+          "visible": true
+        },
+        {
+          "frame_index": 48,
+          "timestamp_sec": 2.0,
+          "visible": true
+        },
+        {
+          "frame_index": 64,
+          "timestamp_sec": 2.667,
+          "visible": true
+        },
+        {
+          "frame_index": 80,
+          "timestamp_sec": 3.333,
+          "visible": true
+        },
+        {
+          "frame_index": 96,
+          "timestamp_sec": 4.0,
+          "visible": true
+        },
+        {
+          "frame_index": 112,
+          "timestamp_sec": 4.667,
+          "visible": true
+        },
+        {
+          "frame_index": 128,
+          "timestamp_sec": 5.333,
+          "visible": true
+        },
+        {
+          "frame_index": 144,
+          "timestamp_sec": 6.0,
+          "visible": true
+        },
+        {
+          "frame_index": 160,
+          "timestamp_sec": 6.667,
+          "visible": true
+        },
+        {
+          "frame_index": 167,
+          "timestamp_sec": 6.958,
+          "visible": true
+        },
+        {
+          "frame_index": 176,
+          "timestamp_sec": 7.333,
+          "visible": true
+        },
+        {
+          "frame_index": 192,
+          "timestamp_sec": 8.0,
+          "visible": true
+        },
+        {
+          "frame_index": 208,
+          "timestamp_sec": 8.667,
+          "visible": true
+        },
+        {
+          "frame_index": 224,
+          "timestamp_sec": 9.333,
+          "visible": true
+        },
+        {
+          "frame_index": 226,
+          "timestamp_sec": 9.417,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "object_name": "other people",
+      "visible_overall": true,
+      "per_frame_visibility": [
+        {
+          "frame_index": 0,
+          "timestamp_sec": 0.0,
+          "visible": true
+        },
+        {
+          "frame_index": 11,
+          "timestamp_sec": 0.458,
+          "visible": true
+        },
+        {
+          "frame_index": 16,
+          "timestamp_sec": 0.667,
+          "visible": true
+        },
+        {
+          "frame_index": 32,
+          "timestamp_sec": 1.333,
+          "visible": true
+        },
+        {
+          "frame_index": 48,
+          "timestamp_sec": 2.0,
+          "visible": true
+        },
+        {
+          "frame_index": 64,
+          "timestamp_sec": 2.667,
+          "visible": true
+        },
+        {
+          "frame_index": 80,
+          "timestamp_sec": 3.333,
+          "visible": true
+        },
+        {
+          "frame_index": 96,
+          "timestamp_sec": 4.0,
+          "visible": true
+        },
+        {
+          "frame_index": 112,
+          "timestamp_sec": 4.667,
+          "visible": true
+        },
+        {
+          "frame_index": 128,
+          "timestamp_sec": 5.333,
+          "visible": true
+        },
+        {
+          "frame_index": 144,
+          "timestamp_sec": 6.0,
+          "visible": true
+        },
+        {
+          "frame_index": 160,
+          "timestamp_sec": 6.667,
+          "visible": true
+        },
+        {
+          "frame_index": 167,
+          "timestamp_sec": 6.958,
+          "visible": true
+        },
+        {
+          "frame_index": 176,
+          "timestamp_sec": 7.333,
+          "visible": true
+        },
+        {
+          "frame_index": 192,
+          "timestamp_sec": 8.0,
+          "visible": true
+        },
+        {
+          "frame_index": 208,
+          "timestamp_sec": 8.667,
+          "visible": true
+        },
+        {
+          "frame_index": 224,
+          "timestamp_sec": 9.333,
+          "visible": true
+        },
+        {
+          "frame_index": 226,
+          "timestamp_sec": 9.417,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "object_name": "map",
+      "visible_overall": true,
+      "per_frame_visibility": [
+        {
+          "frame_index": 0,
+          "timestamp_sec": 0.0,
+          "visible": true
+        },
+        {
+          "frame_index": 11,
+          "timestamp_sec": 0.458,
+          "visible": true
+        },
+        {
+          "frame_index": 16,
+          "timestamp_sec": 0.667,
+          "visible": true
+        },
+        {
+          "frame_index": 32,
+          "timestamp_sec": 1.333,
+          "visible": true
+        },
+        {
+          "frame_index": 48,
+          "timestamp_sec": 2.0,
+          "visible": true
+        },
+        {
+          "frame_index": 64,
+          "timestamp_sec": 2.667,
+          "visible": true
+        },
+        {
+          "frame_index": 80,
+          "timestamp_sec": 3.333,
+          "visible": true
+        },
+        {
+          "frame_index": 96,
+          "timestamp_sec": 4.0,
+          "visible": true
+        },
+        {
+          "frame_index": 112,
+          "timestamp_sec": 4.667,
+          "visible": true
+        },
+        {
+          "frame_index": 128,
+          "timestamp_sec": 5.333,
+          "visible": true
+        },
+        {
+          "frame_index": 144,
+          "timestamp_sec": 6.0,
+          "visible": true
+        },
+        {
+          "frame_index": 160,
+          "timestamp_sec": 6.667,
+          "visible": true
+        },
+        {
+          "frame_index": 167,
+          "timestamp_sec": 6.958,
+          "visible": true
+        },
+        {
+          "frame_index": 176,
+          "timestamp_sec": 7.333,
+          "visible": true
+        },
+        {
+          "frame_index": 192,
+          "timestamp_sec": 8.0,
+          "visible": true
+        },
+        {
+          "frame_index": 208,
+          "timestamp_sec": 8.667,
+          "visible": false
+        },
+        {
+          "frame_index": 224,
+          "timestamp_sec": 9.333,
+          "visible": false
+        },
+        {
+          "frame_index": 226,
+          "timestamp_sec": 9.417,
+          "visible": false
+        }
+      ]
+    }
+  ]
+}

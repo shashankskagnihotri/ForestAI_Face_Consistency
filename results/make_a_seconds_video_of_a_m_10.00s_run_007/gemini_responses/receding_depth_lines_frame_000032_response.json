@@ -1,0 +1,19 @@
+{
+  "usable": false,
+  "frame_assessment": "The visible ceiling lines form a loose cluster rather than converging to a single finite vanishing point, and the table edges are curved contours approximated by tangents. No reliable set of parallel receding 3D lines is present.",
+  "selected_candidate_ids": [],
+  "sanitized_selection": {
+    "frame_index": 32,
+    "timestamp_sec": 1.333333,
+    "image_width": 1280,
+    "image_height": 720,
+    "usable": false,
+    "frame_assessment": "The visible ceiling lines form a loose cluster rather than converging to a single finite vanishing point, and the table edges are curved contours approximated by tangents. No reliable set of parallel receding 3D lines is present.",
+    "selected_candidate_ids": [],
+    "lines": [],
+    "edge_candidate_count": 36,
+    "edge_candidate_overlay_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/annotated_frames/frame_000032_edge_candidates.png",
+    "edge_candidate_manifest_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/gemini_requests/receding_depth_lines_frame_000032_edge_candidates.json",
+    "raw_sampled_frame_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000032_t_1.333s.png"
+  }
+}

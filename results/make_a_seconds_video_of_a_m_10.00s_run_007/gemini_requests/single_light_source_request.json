@@ -1,0 +1,172 @@
+{
+  "criterion": "single_light_source",
+  "model": "gemini-3.1-pro-preview",
+  "http_timeout_ms": 120000,
+  "max_attempts": 2,
+  "json_parse_max_attempts": 2,
+  "response_mime_type": "application/json",
+  "response_schema": {
+    "type": "OBJECT",
+    "properties": {
+      "single_light_source_consistency": {
+        "type": "STRING",
+        "enum": [
+          "yes",
+          "no"
+        ]
+      },
+      "light_sources": {
+        "type": "ARRAY",
+        "items": {
+          "type": "OBJECT",
+          "properties": {
+            "source_id": {
+              "type": "STRING"
+            },
+            "relative_direction_from_frame_center": {
+              "type": "STRING",
+              "enum": [
+                "center",
+                "upper",
+                "lower",
+                "left",
+                "right",
+                "upper-left",
+                "upper-right",
+                "lower-left",
+                "lower-right",
+                "unknown"
+              ]
+            }
+          },
+          "required": [
+            "source_id",
+            "relative_direction_from_frame_center"
+          ]
+        }
+      }
+    },
+    "required": [
+      "single_light_source_consistency",
+      "light_sources"
+    ]
+  },
+  "prompt": "You are evaluating illumination in a generated video.\n\nYou are given the video as a whole and labeled sampled frames.\n\nTask:\nIdentify the large light source or light sources that best explain the visible illumination. For each source, report only its direction relative to the center of the frame/video.\n\nUse only this direction vocabulary:\ncenter, upper, lower, left, right, upper-left, upper-right, lower-left, lower-right, unknown.\n\nSet single_light_source_consistency to \"yes\" only when the video is consistent with exactly one dominant large light source. Set it to \"no\" when multiple large sources are visible or implied, directions conflict, lighting is temporally unstable, or evidence is insufficient.\n\nReturn only JSON matching the schema. Do not include rationales, prose, confidence scores, or per-frame lighting notes.",
+  "evidence_files": {
+    "video": "./sample/prompt_1/make_a_seconds_video_of_a_m.mp4",
+    "sampled_frames": [
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000000_t_0.000s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000011_t_0.458s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000016_t_0.667s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000032_t_1.333s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000048_t_2.000s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000064_t_2.667s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000080_t_3.333s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000096_t_4.000s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000112_t_4.667s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000128_t_5.333s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000144_t_6.000s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000160_t_6.667s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000167_t_6.958s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000176_t_7.333s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000192_t_8.000s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000208_t_8.667s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000224_t_9.333s.png",
+      "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000226_t_9.417s.png"
+    ]
+  },
+  "frame_manifest": [
+    {
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000000_t_0.000s.png"
+    },
+    {
+      "frame_index": 11,
+      "timestamp_sec": 0.458,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000011_t_0.458s.png"
+    },
+    {
+      "frame_index": 16,
+      "timestamp_sec": 0.667,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000016_t_0.667s.png"
+    },
+    {
+      "frame_index": 32,
+      "timestamp_sec": 1.333,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000032_t_1.333s.png"
+    },
+    {
+      "frame_index": 48,
+      "timestamp_sec": 2.0,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000048_t_2.000s.png"
+    },
+    {
+      "frame_index": 64,
+      "timestamp_sec": 2.667,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000064_t_2.667s.png"
+    },
+    {
+      "frame_index": 80,
+      "timestamp_sec": 3.333,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000080_t_3.333s.png"
+    },
+    {
+      "frame_index": 96,
+      "timestamp_sec": 4.0,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000096_t_4.000s.png"
+    },
+    {
+      "frame_index": 112,
+      "timestamp_sec": 4.667,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000112_t_4.667s.png"
+    },
+    {
+      "frame_index": 128,
+      "timestamp_sec": 5.333,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000128_t_5.333s.png"
+    },
+    {
+      "frame_index": 144,
+      "timestamp_sec": 6.0,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000144_t_6.000s.png"
+    },
+    {
+      "frame_index": 160,
+      "timestamp_sec": 6.667,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000160_t_6.667s.png"
+    },
+    {
+      "frame_index": 167,
+      "timestamp_sec": 6.958,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000167_t_6.958s.png"
+    },
+    {
+      "frame_index": 176,
+      "timestamp_sec": 7.333,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000176_t_7.333s.png"
+    },
+    {
+      "frame_index": 192,
+      "timestamp_sec": 8.0,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000192_t_8.000s.png"
+    },
+    {
+      "frame_index": 208,
+      "timestamp_sec": 8.667,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000208_t_8.667s.png"
+    },
+    {
+      "frame_index": 224,
+      "timestamp_sec": 9.333,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000224_t_9.333s.png"
+    },
+    {
+      "frame_index": 226,
+      "timestamp_sec": 9.417,
+      "path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000226_t_9.417s.png"
+    }
+  ],
+  "uploaded_video_name": "files/ffit5jkdx6sx",
+  "uploaded_video_uri": "https://generativelanguage.googleapis.com/v1beta/files/ffit5jkdx6sx"
+}

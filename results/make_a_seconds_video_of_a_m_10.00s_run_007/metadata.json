@@ -1,0 +1,13 @@
+{
+  "video_path": "./sample/prompt_1/make_a_seconds_video_of_a_m.mp4",
+  "video_filename": "make_a_seconds_video_of_a_m.mp4",
+  "video_duration_seconds": 10.0,
+  "frame_count": 240,
+  "fps": 24.0,
+  "width": 1280,
+  "height": 720,
+  "sampling_rule": "Every 16th frame plus 3 uniformly random frames with deduplication.",
+  "random_seed": 1729,
+  "created_result_directory": "./results/make_a_seconds_video_of_a_m_10.00s_run_007",
+  "timestamp_source": "packet_pts"
+}

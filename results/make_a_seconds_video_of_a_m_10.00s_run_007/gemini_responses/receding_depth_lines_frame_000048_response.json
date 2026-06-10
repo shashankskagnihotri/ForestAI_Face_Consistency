@@ -1,0 +1,19 @@
+{
+  "usable": false,
+  "frame_assessment": "Most visible straight lines are transverse (parallel to the image plane) or belong to the person. There is no coherent set of receding depth lines converging to a single finite vanishing point.",
+  "selected_candidate_ids": [],
+  "sanitized_selection": {
+    "frame_index": 48,
+    "timestamp_sec": 2.0,
+    "image_width": 1280,
+    "image_height": 720,
+    "usable": false,
+    "frame_assessment": "Most visible straight lines are transverse (parallel to the image plane) or belong to the person. There is no coherent set of receding depth lines converging to a single finite vanishing point.",
+    "selected_candidate_ids": [],
+    "lines": [],
+    "edge_candidate_count": 36,
+    "edge_candidate_overlay_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/annotated_frames/frame_000048_edge_candidates.png",
+    "edge_candidate_manifest_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/gemini_requests/receding_depth_lines_frame_000048_edge_candidates.json",
+    "raw_sampled_frame_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000048_t_2.000s.png"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "usable": false,
+  "frame_assessment": "No coherent set of straight architectural lines receding into depth; background is blurred and ceiling pipes do not converge to a single vanishing point.",
+  "selected_candidate_ids": [],
+  "sanitized_selection": {
+    "frame_index": 208,
+    "timestamp_sec": 8.666667,
+    "image_width": 1280,
+    "image_height": 720,
+    "usable": false,
+    "frame_assessment": "No coherent set of straight architectural lines receding into depth; background is blurred and ceiling pipes do not converge to a single vanishing point.",
+    "selected_candidate_ids": [],
+    "lines": [],
+    "edge_candidate_count": 36,
+    "edge_candidate_overlay_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/annotated_frames/frame_000208_edge_candidates.png",
+    "edge_candidate_manifest_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/gemini_requests/receding_depth_lines_frame_000208_edge_candidates.json",
+    "raw_sampled_frame_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000208_t_8.667s.png"
+  }
+}

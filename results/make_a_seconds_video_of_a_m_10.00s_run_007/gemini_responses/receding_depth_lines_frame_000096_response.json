@@ -1,0 +1,19 @@
+{
+  "usable": false,
+  "frame_assessment": "The frame is dominated by a person, food, and a round plate. The background is heavily blurred with no reliable, straight architectural lines receding into depth.",
+  "selected_candidate_ids": [],
+  "sanitized_selection": {
+    "frame_index": 96,
+    "timestamp_sec": 4.0,
+    "image_width": 1280,
+    "image_height": 720,
+    "usable": false,
+    "frame_assessment": "The frame is dominated by a person, food, and a round plate. The background is heavily blurred with no reliable, straight architectural lines receding into depth.",
+    "selected_candidate_ids": [],
+    "lines": [],
+    "edge_candidate_count": 36,
+    "edge_candidate_overlay_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/annotated_frames/frame_000096_edge_candidates.png",
+    "edge_candidate_manifest_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/gemini_requests/receding_depth_lines_frame_000096_edge_candidates.json",
+    "raw_sampled_frame_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000096_t_4.000s.png"
+  }
+}

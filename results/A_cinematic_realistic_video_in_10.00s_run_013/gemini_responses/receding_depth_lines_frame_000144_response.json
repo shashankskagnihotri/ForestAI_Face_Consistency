@@ -1,0 +1,102 @@
+{
+  "usable": true,
+  "frame_assessment": "Selected floor seams that recede into the depth of the hallway, converging to a central vanishing point.",
+  "selected_candidate_ids": [
+    "E00",
+    "E08",
+    "E20",
+    "E34"
+  ],
+  "sanitized_selection": {
+    "frame_index": 144,
+    "timestamp_sec": 6.0,
+    "image_width": 1280,
+    "image_height": 720,
+    "usable": true,
+    "frame_assessment": "Selected floor seams that recede into the depth of the hallway, converging to a central vanishing point.",
+    "selected_candidate_ids": [
+      "E00",
+      "E08",
+      "E20",
+      "E34"
+    ],
+    "lines": [
+      {
+        "candidate_id": "E00",
+        "x1": 901.0,
+        "y1": 628.0,
+        "x2": 1006.0,
+        "y2": 719.0,
+        "length_px": 138.946,
+        "angle_deg": 40.914,
+        "midpoint_x": 953.5,
+        "midpoint_y": 673.5,
+        "edge_confidence": 0.835058,
+        "edge_support_fraction": 0.984375,
+        "line_id": "E00",
+        "object_or_scene_edge": "edge-tensor-derived scene edge candidate",
+        "why_this_projects_away_from_camera": "Gemini selected this real edge candidate ID as receding-depth evidence.",
+        "confidence": 0.835058,
+        "geometry_source": "full_resolution_edge_probability_tensor"
+      },
+      {
+        "candidate_id": "E08",
+        "x1": 0.0,
+        "y1": 672.0,
+        "x2": 94.0,
+        "y2": 630.0,
+        "length_px": 102.956,
+        "angle_deg": 155.925,
+        "midpoint_x": 47.0,
+        "midpoint_y": 651.0,
+        "edge_confidence": 0.696039,
+        "edge_support_fraction": 1.0,
+        "line_id": "E08",
+        "object_or_scene_edge": "edge-tensor-derived scene edge candidate",
+        "why_this_projects_away_from_camera": "Gemini selected this real edge candidate ID as receding-depth evidence.",
+        "confidence": 0.696039,
+        "geometry_source": "full_resolution_edge_probability_tensor"
+      },
+      {
+        "candidate_id": "E20",
+        "x1": 994.0,
+        "y1": 669.0,
+        "x2": 1063.0,
+        "y2": 719.0,
+        "length_px": 85.212,
+        "angle_deg": 35.929,
+        "midpoint_x": 1028.5,
+        "midpoint_y": 694.0,
+        "edge_confidence": 0.567415,
+        "edge_support_fraction": 0.84375,
+        "line_id": "E20",
+        "object_or_scene_edge": "edge-tensor-derived scene edge candidate",
+        "why_this_projects_away_from_camera": "Gemini selected this real edge candidate ID as receding-depth evidence.",
+        "confidence": 0.567415,
+        "geometry_source": "full_resolution_edge_probability_tensor"
+      },
+      {
+        "candidate_id": "E34",
+        "x1": 130.379,
+        "y1": 613.799,
+        "x2": 231.641,
+        "y2": 570.501,
+        "length_px": 110.131,
+        "angle_deg": 156.849,
+        "midpoint_x": 181.01,
+        "midpoint_y": 592.15,
+        "edge_confidence": 0.308715,
+        "edge_support_fraction": 0.65625,
+        "line_id": "E34",
+        "object_or_scene_edge": "edge-tensor-derived scene edge candidate",
+        "why_this_projects_away_from_camera": "Gemini selected this real edge candidate ID as receding-depth evidence.",
+        "confidence": 0.308715,
+        "geometry_source": "full_resolution_edge_probability_tensor"
+      }
+    ],
+    "edge_candidate_count": 36,
+    "edge_candidate_overlay_path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/annotated_frames/frame_000144_edge_candidates.png",
+    "edge_candidate_manifest_path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/gemini_requests/receding_depth_lines_frame_000144_edge_candidates.json",
+    "raw_sampled_frame_path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000144_t_6.000s.png"
+  }
+}

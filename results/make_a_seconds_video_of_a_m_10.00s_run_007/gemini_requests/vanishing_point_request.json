@@ -1,0 +1,20 @@
+{
+  "criterion": "vanishing_point",
+  "model": "gemini-3.1-pro-preview",
+  "http_timeout_ms": 120000,
+  "max_attempts": 2,
+  "response_mime_type": "text/x.enum",
+  "response_schema": {
+    "type": "STRING",
+    "enum": [
+      "yes",
+      "no"
+    ]
+  },
+  "prompt": "You are evaluating geometric realism in a generated video.\n\nYou are given sampled frames from the video and, for each frame, an annotated visualization. The finite colored segments were extracted from the full-resolution edge-probability tensor and then selected by Gemini by candidate ID as visible straight object/scene edges that are likely projections of one real-world 3D direction running away from the camera into depth. These are the kinds of lines that should converge to a finite vanishing point. The annotations show:\n1. detected structural edges,\n2. edge-tensor-derived finite receding/depth-parallel object or scene edge segments,\n3. thin extension cues that stay collinear with the finite edge segments and are drawn only for strict VP inliers,\n4. the estimated common vanishing point, when one exists.\n\nQuestion:\nDo the relevant receding/depth-parallel lines in most sampled frames converge to one finite vanishing point within each frame, as expected under real-world perspective geometry?\n\nAnswer \"yes\" only if the visible strict receding/depth-parallel line extensions in each successful frame meet at a perfect single common point. A true finite vanishing point is one exact image-plane point where the projected parallel lines intersect; lines merely passing close to each other, forming a spread-out convergence zone, or aiming toward the same general area are not good enough. The image-coordinate location of that point may drift over time if the camera, crop, or subject position changes, but within any one frame the accepted lines must share one precise VP. Use the provided residuals as a strictness check: segments with residuals around or above 1 degree are loose support and must not be the main basis for a \"yes\" answer.\n\nAnswer \"no\" if the relevant lines within many frames converge to multiple incompatible points, only meet approximately, form a loose cluster instead of one exact intersection point, fail to converge, curve unnaturally, contradict the estimated per-frame vanishing point, or if there is insufficient reliable line evidence.\n\nIgnore left-to-right frontal/transverse edges that are parallel to the image plane; those have a vanishing point at infinity and are not valid evidence for this finite VP check. Also ignore object silhouettes, curved boundaries, shadows, reflections, texture noise, vegetation, and non-rigid or decorative patterns.\n\nReturn only one token: yes or no.",
+  "evidence_files": {
+    "contact_sheet": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/contact_sheet_vanishing_point.png",
+    "full_vanishing_point_diagnostics_saved_on_disk": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/vanishing_point_diagnostics.json",
+    "compact_vanishing_point_diagnostics_sent_to_gemini": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/vanishing_point_compact_diagnostics.json"
+  }
+}

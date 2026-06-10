@@ -1,0 +1,19 @@
+{
+  "usable": false,
+  "frame_assessment": "No reliable receding depth lines are visible; prominent straight edges are either transverse (ceiling beams, table edges) or belong to organic shapes (plants, person).",
+  "selected_candidate_ids": [],
+  "sanitized_selection": {
+    "frame_index": 11,
+    "timestamp_sec": 0.458333,
+    "image_width": 1280,
+    "image_height": 720,
+    "usable": false,
+    "frame_assessment": "No reliable receding depth lines are visible; prominent straight edges are either transverse (ceiling beams, table edges) or belong to organic shapes (plants, person).",
+    "selected_candidate_ids": [],
+    "lines": [],
+    "edge_candidate_count": 36,
+    "edge_candidate_overlay_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/annotated_frames/frame_000011_edge_candidates.png",
+    "edge_candidate_manifest_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/gemini_requests/receding_depth_lines_frame_000011_edge_candidates.json",
+    "raw_sampled_frame_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000011_t_0.458s.png"
+  }
+}

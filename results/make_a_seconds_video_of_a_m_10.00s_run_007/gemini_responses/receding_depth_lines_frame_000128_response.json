@@ -1,0 +1,19 @@
+{
+  "usable": false,
+  "frame_assessment": "The background is heavily blurred with no clear architectural depth lines. The visible straight edges are either transverse table edges, horizontal window frames, or boundaries of the person/burger, none of which provide reliable receding depth cues.",
+  "selected_candidate_ids": [],
+  "sanitized_selection": {
+    "frame_index": 128,
+    "timestamp_sec": 5.333333,
+    "image_width": 1280,
+    "image_height": 720,
+    "usable": false,
+    "frame_assessment": "The background is heavily blurred with no clear architectural depth lines. The visible straight edges are either transverse table edges, horizontal window frames, or boundaries of the person/burger, none of which provide reliable receding depth cues.",
+    "selected_candidate_ids": [],
+    "lines": [],
+    "edge_candidate_count": 36,
+    "edge_candidate_overlay_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/annotated_frames/frame_000128_edge_candidates.png",
+    "edge_candidate_manifest_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/gemini_requests/receding_depth_lines_frame_000128_edge_candidates.json",
+    "raw_sampled_frame_path": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000128_t_5.333s.png"
+  }
+}

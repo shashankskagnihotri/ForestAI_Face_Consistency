@@ -1,0 +1,13 @@
+{
+  "video_path": "./sample/prompt_2/A_cinematic_realistic_video_in.mp4",
+  "video_filename": "A_cinematic_realistic_video_in.mp4",
+  "video_duration_seconds": 10.0,
+  "frame_count": 240,
+  "fps": 24.0,
+  "width": 1280,
+  "height": 720,
+  "sampling_rule": "Every 16th frame plus 3 uniformly random frames with deduplication.",
+  "random_seed": 1729,
+  "created_result_directory": "./results/A_cinematic_realistic_video_in_10.00s_run_013",
+  "timestamp_source": "packet_pts"
+}

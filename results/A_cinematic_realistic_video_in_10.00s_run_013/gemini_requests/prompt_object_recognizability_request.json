@@ -1,0 +1,183 @@
+{
+  "criterion": "prompt_object_recognizability",
+  "model": "gemini-3.1-pro-preview",
+  "http_timeout_ms": 120000,
+  "max_attempts": 2,
+  "json_parse_max_attempts": 2,
+  "response_mime_type": "application/json",
+  "response_schema": {
+    "type": "OBJECT",
+    "properties": {
+      "prompt_object_recognizability": {
+        "type": "STRING",
+        "enum": [
+          "yes",
+          "no"
+        ]
+      },
+      "objects_of_interest": {
+        "type": "ARRAY",
+        "items": {
+          "type": "OBJECT",
+          "properties": {
+            "object_name": {
+              "type": "STRING"
+            },
+            "visible_overall": {
+              "type": "BOOLEAN"
+            },
+            "per_frame_visibility": {
+              "type": "ARRAY",
+              "items": {
+                "type": "OBJECT",
+                "properties": {
+                  "frame_index": {
+                    "type": "NUMBER"
+                  },
+                  "timestamp_sec": {
+                    "type": "NUMBER"
+                  },
+                  "visible": {
+                    "type": "BOOLEAN"
+                  }
+                },
+                "required": [
+                  "frame_index",
+                  "timestamp_sec",
+                  "visible"
+                ]
+              }
+            }
+          },
+          "required": [
+            "object_name",
+            "visible_overall",
+            "per_frame_visibility"
+          ]
+        }
+      }
+    },
+    "required": [
+      "prompt_object_recognizability",
+      "objects_of_interest"
+    ]
+  },
+  "prompt": "You are evaluating prompt-video consistency in a generated video.\n\nThe original video-generation prompt is:\n\n\"make a video of a person walking, towards the camera in a long hallway, like in a vatican city palace, a long hallway, 2-3 other people walking away or tangenial to the camera.  The main person is holding a flyer like map of the vatican city, exploring the place.  in the last 3 seconds focus on the face of the person. \"\n\nYou are given the video as a whole and labeled sampled frames.\n\nTask:\nFirst identify the objects or subjects of interest requested by the prompt. List only prompt-relevant objects/subjects, not incidental background details. Then report whether each object is visible overall in the video and whether it is visible in each labeled sampled frame.\n\nSet prompt_object_recognizability to \"yes\" only when the main prompt-requested objects/subjects are visibly present and semantically recognizable in most of the video. Set it to \"no\" if important prompted objects are absent, ambiguous, heavily distorted, visible only briefly, or insufficiently evidenced.\n\nReturn only JSON matching the schema. Do not include rationales or extra fields.",
+  "evidence_files": {
+    "video": "./sample/prompt_2/A_cinematic_realistic_video_in.mp4",
+    "sampled_frames": [
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000000_t_0.000s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000011_t_0.458s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000016_t_0.667s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000032_t_1.333s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000048_t_2.000s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000064_t_2.667s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000080_t_3.333s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000096_t_4.000s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000112_t_4.667s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000128_t_5.333s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000144_t_6.000s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000160_t_6.667s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000167_t_6.958s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000176_t_7.333s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000192_t_8.000s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000208_t_8.667s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000224_t_9.333s.png",
+      "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000226_t_9.417s.png"
+    ]
+  },
+  "frame_manifest": [
+    {
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000000_t_0.000s.png"
+    },
+    {
+      "frame_index": 11,
+      "timestamp_sec": 0.458,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000011_t_0.458s.png"
+    },
+    {
+      "frame_index": 16,
+      "timestamp_sec": 0.667,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000016_t_0.667s.png"
+    },
+    {
+      "frame_index": 32,
+      "timestamp_sec": 1.333,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000032_t_1.333s.png"
+    },
+    {
+      "frame_index": 48,
+      "timestamp_sec": 2.0,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000048_t_2.000s.png"
+    },
+    {
+      "frame_index": 64,
+      "timestamp_sec": 2.667,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000064_t_2.667s.png"
+    },
+    {
+      "frame_index": 80,
+      "timestamp_sec": 3.333,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000080_t_3.333s.png"
+    },
+    {
+      "frame_index": 96,
+      "timestamp_sec": 4.0,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000096_t_4.000s.png"
+    },
+    {
+      "frame_index": 112,
+      "timestamp_sec": 4.667,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000112_t_4.667s.png"
+    },
+    {
+      "frame_index": 128,
+      "timestamp_sec": 5.333,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000128_t_5.333s.png"
+    },
+    {
+      "frame_index": 144,
+      "timestamp_sec": 6.0,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000144_t_6.000s.png"
+    },
+    {
+      "frame_index": 160,
+      "timestamp_sec": 6.667,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000160_t_6.667s.png"
+    },
+    {
+      "frame_index": 167,
+      "timestamp_sec": 6.958,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000167_t_6.958s.png"
+    },
+    {
+      "frame_index": 176,
+      "timestamp_sec": 7.333,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000176_t_7.333s.png"
+    },
+    {
+      "frame_index": 192,
+      "timestamp_sec": 8.0,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000192_t_8.000s.png"
+    },
+    {
+      "frame_index": 208,
+      "timestamp_sec": 8.667,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000208_t_8.667s.png"
+    },
+    {
+      "frame_index": 224,
+      "timestamp_sec": 9.333,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000224_t_9.333s.png"
+    },
+    {
+      "frame_index": 226,
+      "timestamp_sec": 9.417,
+      "path": "./results/A_cinematic_realistic_video_in_10.00s_run_013/sampled_frames/frame_000226_t_9.417s.png"
+    }
+  ],
+  "uploaded_video_name": "files/lu7ngrlilbro",
+  "uploaded_video_uri": "https://generativelanguage.googleapis.com/v1beta/files/lu7ngrlilbro"
+}

@@ -1,0 +1,42 @@
+{
+  "criterion": "receding_depth_lines_frame_000080",
+  "model": "gemini-3.1-pro-preview",
+  "http_timeout_ms": 120000,
+  "max_attempts": 2,
+  "json_parse_max_attempts": 2,
+  "response_mime_type": "application/json",
+  "response_schema": {
+    "type": "OBJECT",
+    "properties": {
+      "usable": {
+        "type": "BOOLEAN"
+      },
+      "frame_assessment": {
+        "type": "STRING"
+      },
+      "selected_candidate_ids": {
+        "type": "ARRAY",
+        "items": {
+          "type": "STRING"
+        }
+      }
+    },
+    "required": [
+      "usable",
+      "frame_assessment",
+      "selected_candidate_ids"
+    ]
+  },
+  "prompt": "You are selecting evidence line IDs for vanishing-point analysis in one video frame.\n\nOriginal video-generation prompt:\n\"make a 15 seconds video of a man sitting at a table in a resturant eating a vegan burger, zoom into the face of the man in the last 3 seconds of the video.\"\n\nUse this perspective rule: a vanishing point is the image-plane point where the perspective projections of straight 3D lines that are mutually parallel appear to converge. For this task, select candidate IDs whose edge segments come from one real-world 3D direction that projects away from the camera into scene depth, such as the long direction of a hallway, aisle, floor, wall, ceiling, baseboard, rail, counter, bench, table, or rigid rectangular object.\n\nCritical rejection rule: do not select left-to-right frontal/transverse edges that are parallel to the camera/image plane. Those lines may look horizontal in the image and would meet only at infinity, so they are wrong evidence for this finite vanishing-point analysis. The selected lines must visibly run away from the camera toward depth and their mathematical extensions should be compatible with one shared finite point, not merely a loose nearby cluster.\n\nImportant geometry rule: you are NOT drawing lines and you must NOT invent coordinates. The candidate line segments were extracted from the full-resolution edge-probability tensor. Return only candidate IDs from the provided candidate list.\n\nFrame metadata:\n- Frame index: 80\n- Timestamp: 3.333333 seconds\n- Image size: width 1280px, height 720px\n- Pixel coordinate origin is the top-left corner. x increases rightward, y increases downward.\n\nTask:\nChoose the best visible straight edge candidate IDs that are likely projections of real straight 3D scene/object edges running away from the camera into depth. Prefer man-made structural edges whose 3D direction is clear:\n- hallway floor/wall seams, baseboards, wall/ceiling seams, corridor edges, long aisle edges, rails, benches, counters, or floor/tile seams that recede down the hallway,\n- receding table side/back edges or tabletop seams that visibly run into depth,\n- long rigid rectangular-object edges only when they are physically aligned with the scene-depth direction.\n\nPriority order:\n1. First search the numbered edge candidates for corridor/hallway depth cues: floor-wall boundaries, baseboards, ceiling-wall boundaries, long rails, long floor seams, and architectural edges that point away from the camera.\n2. Select a coherent set of candidate IDs from the same real-world parallel direction whenever possible. Their extended 2D lines should converge to one finite point; do not mix lines that only roughly aim into the same region.\n3. If fewer than 2 reliable receding/depth-parallel scene or rigid-object edge candidates are visible, return usable=false and an empty selected_candidate_ids list.\n4. If there are multiple plausible depth directions, choose the dominant hallway/scene-depth direction, not decorative or incidental directions.\n5. Do not select two unrelated 3D directions just because both are roughly horizontal or high contrast in the image.\n\nDo not select:\n- arbitrary image-horizontal candidate segments or left-to-right bands,\n- floor/tile/step candidates that cross the image horizontally and are perpendicular to the hallway direction,\n- curved contours approximated by a tangent,\n- body, face, hair, hand, flyer/map, clothing, or person silhouettes,\n- decorative wall panels, picture frames, text strokes, window mullions, lamp edges, plant stems, or ceiling beams unless the visible edge is clearly one of the hallway/scene-depth parallel edges,\n- shadows, highlights, texture ridges, wrinkles, vegetation, decorative patterns, text strokes, blur trails, or compression artifacts,\n- vertical edges or edges perpendicular to the ground plane,\n- candidate IDs selected only because they are long or high contrast,\n- crop/frame borders or purely frontal horizontal object edges with no visible depth recession.\n\nReturn 2 to 12 candidate IDs when reliable evidence exists. If fewer than 2 reliable receding/depth-parallel straight edge candidates are visible, return usable=false and an empty selected_candidate_ids list.\n\nCandidate ID rules:\n- Return only IDs that appear in the provided candidate list.\n- Do not return coordinates, endpoints, or descriptions of new lines.\n- Prefer candidates with strong alignment to real image contours and edge tensor support.\n- Prefer multiple candidates that plausibly share the same 3D parallel direction and project away from the camera.\n- Keep `frame_assessment` extremely short.\n\nReturn only JSON that matches the schema. Keep text fields short.",
+  "evidence_files": {
+    "sampled_frame": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/sampled_frames/frame_000080_t_3.333s.png",
+    "edge_candidate_overlay": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/annotated_frames/frame_000080_edge_candidates.png",
+    "edge_candidate_manifest": "./results/make_a_seconds_video_of_a_m_10.00s_run_007/gemini_requests/receding_depth_lines_frame_000080_edge_candidates.json"
+  },
+  "video_generation_prompt": "make a 15 seconds video of a man sitting at a table in a resturant eating a vegan burger, zoom into the face of the man in the last 3 seconds of the video.",
+  "frame_index": 80,
+  "timestamp_sec": 3.333333,
+  "image_width": 1280,
+  "image_height": 720,
+  "edge_candidate_count": 36
+}
