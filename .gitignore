@@ -1,0 +1,49 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# Build and packaging outputs
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Local editor and OS metadata
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment and secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Project runtime artifacts
+results/
+debugging/
+slurm/
+models/
+
+# Large/generated media and arrays outside curated samples
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.safetensors
